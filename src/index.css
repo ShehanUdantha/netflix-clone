@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:focus-within ~ label {
+  @apply transform -translate-y-6 text-[11px] pt-[0.6rem] md:font-medium md:text-[13px];
+}
