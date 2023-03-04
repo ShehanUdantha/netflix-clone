@@ -1,1 +1,1 @@
-Create a Netflix HomePage using React js and Tailwindcss 
+Create a Netflix Frontend using React js and Tailwindcss 
