@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-input:focus-within ~ label {
-  @apply transform -translate-y-6 text-[11px] pt-[0.6rem] md:font-medium md:text-[13px];
+input:focus-within ~ .label-one {
+  @apply transform -translate-y-6 text-[11px] pt-[0.6rem] md:font-bold md:text-[12px];
+}
+
+input:focus-within ~ .label-two {
+  @apply transform -translate-y-6 pt-[1rem] text-[11px];
 }

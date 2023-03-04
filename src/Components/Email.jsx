@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const Email = () => {
   const [email, setEmail] = useState("");
   const [display, setDisplay] = useState(false);
   const [message, setMessage] = useState("Email is required!");
+  const emailField = useRef(null);
 
   const handleEmail = (e) => {
     const value = e.target.value;
@@ -41,18 +42,20 @@ const Email = () => {
         <div className="h-[48px] min-w-[450px] text-[16px] font-normal light-size relative flex justify-center items-center md:h-[60px]">
           <input
             type="email"
-            className={`h-full w-[75%] px-[10px] pt-[10px] text-black outline-none rounded-l-sm rounded-r-sm placeholder:text-[#8c8c8c] md:w-full md:rounded-r-none ${
+            className={`h-full w-[75%] px-[10px] pt-[10px]  text-black outline-none rounded-l-sm rounded-r-sm placeholder:text-[#8c8c8c] md:w-full md:rounded-r-none ${
               display ? "border-b-2 border-[#ffa00a]" : ""
             }`}
             placeholder=""
+            ref={emailField}
             onChange={(e) => handleEmail(e)}
           />
           <label
-            className={`absolute light-size font-medium tracking-wide left-[3.5rem] text-[14px] top-[1.2rem] px-[0.55rem] text-[#8c8c8c] cursor-text md:left-0 md:text-[16px] ${
+            className={`label-one absolute light-size font-medium tracking-wide left-[3.5rem] top-[1.2rem] px-[0.55rem] text-[#8c8c8c] cursor-text md:left-0 ${
               email === ""
-                ? ""
-                : "transform -translate-y-6 text-[11px] pt-[0.6rem] md:font-medium md:text-[13px]"
+                ? "text-[14px] md:text-[16px] "
+                : "transform -translate-y-6 text-[11px] pt-[0.6rem] md:font-bold md:text-[12px]"
             }`}
+            onClick={() => emailField.current.focus()}
           >
             Email address
           </label>

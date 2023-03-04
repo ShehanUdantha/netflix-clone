@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Email from "../Components/Email";
 
 const Home = () => {
@@ -23,12 +24,11 @@ const Home = () => {
           </g>
         </svg>
 
-        <a
-          href=""
-          className="light-size bg-[#e50914] text-white px-[0.4rem] py-[0.13rem] rounded-[3px] text-[16px] font-normal leading-normal md:px-[17px] md:py-[5px]"
-        >
-          Sign In
-        </a>
+        <Link to="/login">
+          <div className="light-size bg-[#e50914] text-white px-[0.4rem] py-[0.13rem] rounded-[3px] text-[16px] font-normal leading-normal md:px-[17px] md:py-[5px]">
+            Sign In
+          </div>
+        </Link>
       </div>
 
       {/* main text */}
