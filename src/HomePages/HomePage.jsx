@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "./HomePages/Home";
-import Tv from "./HomePages/Tv";
-import Download from "./HomePages/Download";
-import Watch from "./HomePages/Watch";
-import Kids from "./HomePages/Kids";
-import FAQ from "./HomePages/FAQ";
-import Contact from "./HomePages/Contact";
+import Home from "./Home";
+import Tv from "./Tv";
+import Download from "./Download";
+import Watch from "./Watch";
+import Kids from "./Kids";
+import FAQ from "./FAQ";
+import Contact from "./Contact";
 
 const HomePage = () => {
   return (

@@ -1,10 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Email = () => {
   const [email, setEmail] = useState("");
   const [display, setDisplay] = useState(false);
   const [message, setMessage] = useState("Email is required!");
   const emailField = useRef(null);
+  const [goto, setGoto] = useState(false);
+  const navigate = useNavigate();
 
   const handleEmail = (e) => {
     const value = e.target.value;
@@ -29,9 +32,17 @@ const Email = () => {
       setDisplay(true);
     } else {
       setDisplay(false);
+      setGoto(true);
     }
     console.log(email);
   };
+
+  useEffect(() => {
+    if (goto) {
+      navigate("/signup");
+    }
+  });
+
   return (
     <div className="overflow-x-hidden">
       <form
